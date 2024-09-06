@@ -16,7 +16,7 @@ O objetivo principal deste projeto é criar uma aplicação funcional para geren
 - **HTML/CSS/JavaScript**: Para desenvolvimento da interface. 🖥️
 
 ## Uso
-1. [!https://prot-tipo-pi-git-main-olie-dcs-projects.vercel.app/login.html]
+1. [Link](https://prot-tipo-pi-git-main-olie-dcs-projects.vercel.app/login.html)
 
 ## Contribuição
 Contribuições são mais do que bem-vindas! Para contribuir, faça um fork do repositório, faça suas alterações e envie um pull request.✨
