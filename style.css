@@ -1,0 +1,377 @@
+/* ===============
+   Estilos Gerais
+   ===============*/
+   :root {
+    --primary-color: #3498db;
+    --primary-color-dark: #2980b9;
+    --secondary-color: #2c3e50;
+    --highlight-color: #27ae60;
+    --warning-color: #e74c3c;
+    --background-color: #f4f4f9;
+    --text-color: #333;
+    --border-color: #ddd;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden; 
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: var(--secondary-color);
+}
+
+main {
+    margin-bottom: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+/* ========================
+   Estilos para Formulários
+   ======================== */
+form {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px var(--shadow-light);
+}
+
+form .form-group {
+    margin-bottom: 20px;
+}
+
+form .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form input[type="email"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form button.btn-submit {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+form button.btn-submit:hover {
+    background-color: var(--primary-color-dark);
+}
+
+/* ====================
+   Estilos para Tabelas
+   ==================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid var(--border-color);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #ecf0f1;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* ===========================
+   Estilos para Links e Botões
+   =========================== */
+a.btn-action {
+    background-color: var(--highlight-color);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+a.btn-action:hover {
+    background-color: var(--highlight-color);
+}
+
+/* ============================
+   Estilos para a Barra Lateral
+   ============================ */
+/* Barra Lateral */
+.barra-lateral {
+    width: 200px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px var(--shadow-dark);
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+    transform: translateX(0); 
+    z-index: 1000;
+    overflow-y: auto; 
+}
+
+/* Classe para esconder a barra lateral */
+.barra-lateral.hidden {
+    transform: translateX(-100%); /* Move a barra lateral para fora da tela */
+}
+
+/* Estilos do Cabeçalho da Barra Lateral */
+.barra-lateral h2 {
+    font-size: 1.8em;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+}
+
+/* Estilos do Menu de Navegação */
+.barra-lateral nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 80px 0;
+}
+
+.barra-lateral nav ul li {
+    margin-bottom: 15px; /* Espaçamento entre os links */
+}
+
+.barra-lateral nav ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.barra-lateral nav ul li a:hover {
+    background-color: #34495e;
+    color: #fff;
+}
+
+/* Estilos do Botão Sair */
+.barra-lateral .btn-submit {
+    display: block;
+    background-color: var(--warning-color);
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 20px; /* Espaçamento acima do botão */
+    transition: background-color 0.3s ease;
+}
+
+.barra-lateral .btn-submit:hover {
+    background-color: #c0392b;
+}
+
+/* Estilos do Botão de Alternância */
+.menu-toggle {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background-color: var(--primary-color-dark);
+}
+
+/* Ajustes para Conteúdo Principal - INDEX */
+.conteudo-principal {
+    margin-left: 25px; /* Ajustar a largura da barra lateral */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+.conteudo-principal P {
+    margin-left: 260px; /* Ajustar a largura da barra lateral */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Ajuste para ocultar a barra lateral em dispositivos móveis */
+@media (max-width: 768px) {
+    .barra-lateral {
+        transform: translateX(-100%); /* Ocultar a barra lateral em dispositivos móveis */
+    }
+
+    .barra-lateral.active {
+        transform: translateX(0); /* Mostrar a barra lateral quando ativa */
+    }
+
+    .conteudo-principal {
+        margin-left: 0; /* Ajustar a margem para dispositivos móveis */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* ===================================
+   Estilos para as Páginas Específicas
+   =================================== */
+.registration-form,
+.employee-form,
+.expense-form,
+.task-form,
+.feedback-form {
+    margin-bottom: 30px;
+}
+
+.registration-form h2,
+.employee-form h2,
+.expense-form h2,
+.task-form h2,
+.feedback-form h2 {
+    font-size: 1.5em;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+/* ============
+      Login
+   ============ */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    background-color: #f4f4f4;
+}
+
+.login-container {
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-light);
+    background-color: #fff;
+    text-align: left; 
+    box-sizing: border-box; 
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.login-container .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-container .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.login-container .btn-submit {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+}
+
+.login-container .btn-submit:hover {
+    background-color: var(--primary-color-dark);
+}
