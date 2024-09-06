@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback dos Funcionários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu">
+        <button class="menu-toggle"><h3>Menu</h3></button>
+        <!-- Barra Lateral -->
+        <aside class="barra-lateral">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="tasks.html">Tarefas</a></li>
+                    <li><a href="finance.html">Financeiro</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="registration.html">Cadastro</a></li>
+                    <li><a href="login.html" class="btn-submit">Sair</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+    <div class="container">
+        <header>
+            <h1>Feedback dos Funcionários</h1>
+        </header>
+        <main>
+            <!-- Seção para Adicionar Feedback -->
+            <section class="feedback-form">
+                <h2>Adicionar Feedback</h2>
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="funcionario_id">Funcionário:</label>
+                        <select id="funcionario_id" name="funcionario_id" required>
+                            <option value="{{funcionario.id}}">{{funcionario.name}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback_type">Tipo de Feedback:</label>
+                        <select id="feedback_type" name="feedback_type" required>
+                            <option value="Meta">Meta</option>
+                            <option value="Advertência">Advertência</option>
+                            <option value="Atraso">Atraso</option>
+                            <option value="Atestado Médico">Atestado Médico</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Descrição:</label>
+                        <textarea id="description" name="description" placeholder="Descrição do feedback" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback_date">Data:</label>
+                        <input type="date" id="feedback_date" name="feedback_date" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Adicionar Feedback</button>
+                </form>
+            </section>
+
+            <!-- Seção para Exibir Feedback -->
+            <section class="feedback-list">
+                <h2>Lista de Feedbacks</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{funcionario_name}}</td>
+                            <td>{{type}}</td>
+                            <td>{{description}}</td>
+                            <td>{{date}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Gerenciador de Feedbacks. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
