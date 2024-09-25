@@ -34,8 +34,7 @@
                 <form action="" method="post">
                     <div class="form-group">
                         <label for="funcionario_id">Funcionário:</label>
-                        <select id="funcionario_id" name="funcionario_id" required>
-                            <option value="{{funcionario.id}}">{{name}}</option>
+                        <input type="text" id="name" name="name" placeholder="Nome do funcionário" required>
                         </select>
                     </div>
                     <div class="form-group">
@@ -48,7 +47,7 @@
                     </div>
                     <div class="form-group">
                         <label for="expense_date">Data:</label>
-                        <input type="date" id="expense_date" name="expense_date" required>
+                        <input type="text" id="date" name="date"  placeholder="02/02/2024" required>
                     </div>
                     <button type="submit" class="btn-submit">Adicionar Gasto</button>
                 </form>
